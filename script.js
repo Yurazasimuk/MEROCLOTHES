@@ -606,8 +606,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// === MERO AI Logic ===
-const GEMINI_API_KEY = "AIzaSyAhui5dlWBXAnkCxAOkLl2PsEo_7HE-09Q";
+
+const GEMINI_API_KEY = "AIzaSyDP33lgCGEsFJOkntA81xJNQ6Xs5r0EffQ";
 
 function appendMessage(sender, text) {
     const chatMessages = document.getElementById('ai-messages');
@@ -657,7 +657,7 @@ async function sendMessageToAI() {
     `;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
